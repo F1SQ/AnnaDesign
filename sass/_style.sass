@@ -1,0 +1,592 @@
+// Header
+.header
+  border-bottom: 1px solid $main
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-height: 80px
+  &-social
+    display: flex
+    align-items: center
+    &__link
+      color: $main
+      text-decoration: none
+      transition: all 0.3s ease
+      width: 30px
+      height: 30px
+      border-radius: 50%
+
+      &:not(:last-child)
+        margin: 0 15px 0 0
+        img
+          width: 100%
+          height: 100%
+    &__phone
+      position: relative
+      color: $main
+      font-family: 'MiriamLibre', sans
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 118%
+      text-decoration: none
+      &:before
+        content: ''
+        position: absolute
+        transition: transform .3s ease
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 2px
+        background: $main
+        transform: scaleX(0)
+      &:hover:before
+        transform: scaleX(1)
+  &-nav
+
+  &-list
+    display: flex
+    align-items: center
+    list-style: none
+    direction: rtl
+    margin: 0
+    padding: 0
+    li
+      a
+        position: relative
+        display: inline-block
+        text-decoration: none
+        color: $main
+        transition: all 0.3s ease
+        font-style: normal
+        font-weight: normal
+        font-size: 25px
+        line-height: 122%
+        overflow: hidden
+        &:before
+          content: ''
+          position: absolute
+          transition: transform .3s ease
+          left: 0
+          bottom: 0
+          width: 100%
+          height: 2px
+          background: $main
+          transform: scaleX(0)
+
+        &:hover:before
+          transform: scaleX(1)
+
+    li:not(:last-child)
+      margin: 0 0 0 20px
+  &-mobile
+    &--hidden
+      // display: none
+      // visibility: hidden
+    &--visible
+      display: block
+      visibility: visible
+  &-button
+    display: none
+
+// Section main
+
+.main
+  position: relative
+  background-image: url(../img/main-bg.webp)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  border-bottom: 1px solid $main
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: ease-gradient(180deg, rgba(0, 0, 0, 0.5) -16.25%, rgba(0, 0, 0, 0) 106.62%)
+  &_container
+    position: relative
+  &-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 30px 0 50px 0
+  &-logo
+    max-width: 540px
+    max-height: 540px
+    margin: 0 0 25px 0
+    img
+      width: 100%
+      height: 100%
+      border-radius: 50%
+      box-shadow: 0 0 40px rgba($main, 0.7)
+  &-text
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+  &-title
+    font-weight: normal
+    font-size: 75px
+    line-height: 70px
+    color: $main
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    margin: 0 0 25px 0
+  &-subtitle
+    font-weight: normal
+    font-size: 25px
+    line-height: 144%
+    display: flex
+    align-items: center
+    color: $main
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    margin: 0 0 25px 0
+  &-button
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: 'MiriamLibre', sans-serif
+    font-weight: bold
+    font-size: 25px
+    line-height: 120%
+    width: 220px
+    min-height: 60px
+    padding: 5px 10px
+    border-radius: 30px
+    background-color: $main
+    color: #000
+    text-decoration: none
+    overflow: hidden
+    transition: all 0.3s ease-in-out
+    z-index: 5
+    &:hover
+      color: $main
+      box-shadow: 0 0 10px rgba($main, 0.7)
+    &::before, &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 50%
+      background-color: #111111
+      visibility: hidden
+      opacity: 0
+      z-index: -1
+    &::before
+      top: -50%
+      transition: all 0.2s ease-in
+    &::after
+      bottom: -50%
+      transition: all 0.2s ease-in
+.main-button:active
+  color: $main
+.main-button:hover::before
+  top: 0
+  visibility: visible
+  opacity: 1
+.main-button:hover::after
+  bottom: 0
+  opacity: 1
+  visibility: visible
+
+// Section gallery
+
+.gallery
+  padding: 80px 0 80px 0
+  direction: rtl
+  border-bottom: 1px solid $main
+
+  &-title
+    margin: 0 0 70px 0
+    font-weight: normal
+    font-size: 45px
+    line-height: 144%
+    color: $main
+    text-shadow: 4px 4px 4px rgba($main, 0.25)
+  &-buttons
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    margin: 0 0 40px 0
+  &-button
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 160px
+    min-height: 50px
+    font-size: 25px
+    line-height: 144%
+    margin: 0 0 30px 30px
+    padding: 5px
+    color: #101010
+    text-decoration: none
+    border-radius: 30px
+    overflow: hidden
+    background: radial-gradient(50% 50% at 50% 50%, #FFF438 32.29%, #DFBB00 100%)
+    transition: all 0.3s ease-in-out
+    z-index: 5
+    &:hover
+      color: $main
+      box-shadow: 0 0 10px rgba($main, 0.7)
+    &::before, &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 50%
+      background-color: #111111
+      visibility: hidden
+      opacity: 0
+      z-index: -1
+    &::before
+      top: -50%
+      transition: all 0.2s ease-in
+    &::after
+      bottom: -50%
+      transition: all 0.2s ease-in
+    &:last-child
+      margin: 0 0 30px 0
+  &-content
+    display: flex
+    flex-wrap: wrap
+    gap: 30px
+  &-item
+    width: 23%
+    height: 260px
+    // width: 260px
+    a
+      display: inline-block
+      width: 100%
+      height: 100%
+      .active
+        display: block
+    img
+      width: 100%
+      height: 100%
+      border-radius: 10px
+      object-fit: cover
+.gallery-category__wrapper.active
+  display: block
+
+.gallery-button:active
+  color: $main
+.gallery-button:hover::before
+  top: 0
+  visibility: visible
+  opacity: 1
+.gallery-button:hover::after
+  bottom: 0
+  opacity: 1
+  visibility: visible
+
+.gallery-button.active
+  color: $main
+  background: #101010
+  box-shadow: 0 0 25px rgba($main, 0.7)
+
+// section About
+
+.about
+  padding: 80px 0
+  position: relative
+  background-image: url(../img/About-us-bg.webp)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  border-bottom: 1px solid $main
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.4)
+  &-wrapper
+    position: relative
+    direction: rtl
+  &-title
+    margin: 0 0 70px 0
+    font-size: 45px
+    line-height: 65px
+    color: $main
+    text-shadow: 4px 4px 4px rgba($main, 0.25)
+  &-list
+    margin: 0
+    padding: 0
+    li
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      padding: 0
+      font-weight: normal
+      font-size: 25px
+      line-height: 36px
+      color: $main
+      // text-align: right
+      img
+        margin: 0 0 0 20px
+      &:not(:last-child)
+        margin: 0 0 15px 0
+
+// Section Contacts
+
+.contacts
+  padding: 80px 0
+  border-bottom: 1px solid $main
+
+  &-wrapper
+    direction: rtl
+  &-title
+    margin: 0 0 50px 0
+    font-size: 45px
+    line-height: 65px
+    color: $main
+    text-shadow: 4px 4px 4px rgba($main, 0.25)
+  &-items
+    position: relative
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-wrap: wrap
+  &-item
+    position: relative
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-direction: column
+    flex: 1 1 47%
+    max-width: 600px
+    min-height: 240px
+    padding: 30px
+    background-color: #111111
+    border-radius: 20px
+    &::before, &::after
+      content: ''
+      position: absolute
+      background-color: rgba($main, 0.5)
+      filter: blur(7px)
+      width: 150px
+      height: 150px
+      z-index: -1
+    &::before
+      top: -3px
+      right: -3px
+    &::after
+      left: -3px
+      bottom: -3px
+
+    &:nth-child(even)
+      margin: 0 0 40px 0
+    &:nth-child(odd)
+      margin: 0 0 40px 50px
+
+    &__info
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin: 0 0 50px 0
+    &__number
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      flex-shrink: 0
+      margin: 0 0 0 35px
+      font-family: 'MiriamLibre', sans
+      font-style: normal
+      font-weight: bold
+      font-size: 30px
+      line-height: 132%
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      color: #000
+      background-color: $main
+    &__name
+      position: relative
+      font-family: 'MiriamLibre', sans
+      font-style: normal
+      font-weight: bold
+      font-size: 35px
+      line-height: 130%
+      color: $main
+      overflow: hidden
+      &::after
+        content: ''
+        position: absolute
+        right: -150px
+        bottom: -50px
+        background-color: rgba($main, 0.2)
+        width: 50px
+        height: 150px
+        transform: rotate(45deg)
+        animation-name: about-slide
+        animation-delay: 0.5s
+        animation-duration: 7s
+        animation-iteration-count: infinite
+    &__button
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 240px
+      min-height: 70px
+      margin: 0 auto
+      padding: 10px 20px
+      font-family: 'MiriamLibre', sans
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      line-height: 86%
+      letter-spacing: 0.05em
+      color: #101010
+      background-color: $main
+      border-radius: 30px
+      text-decoration: none
+      overflow: hidden
+      transition: all 0.3s ease-in-out
+      z-index: 5
+      &:hover
+        color: $main
+        box-shadow: 0 0 10px rgba($main, 0.7)
+      &::before, &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 50%
+        background-color: #111111
+        visibility: hidden
+        opacity: 0
+        z-index: -1
+      &::before
+        top: -50%
+        transition: all 0.2s ease-in
+      &::after
+        bottom: -50%
+        transition: all 0.2s ease-in
+    &__phone
+      position: relative
+      font-family: 'MiriamLibre', sans
+      font-style: normal
+      font-weight: bold
+      font-size: 40px
+      line-height: 130%
+      display: flex
+      align-items: center
+      color: $main
+      margin: 0 auto
+      transition: all 0.2s ease
+      text-decoration: none
+      &:before
+        content: ''
+        position: absolute
+        transition: transform .3s ease
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 2px
+        background: $main
+        transform: scaleX(0)
+      &:hover:before
+        transform: scaleX(1)
+    &__links
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 auto
+
+    &__link
+      display: inline-block
+      width: 50px
+      height: 50px
+      img
+        width: 100%
+        height: auto
+      &:not(:last-child)
+        margin: 0 0 0 30px
+
+.contacts-item__button:active
+  color: $main
+.contacts-item__button:hover::before
+  top: 0
+  visibility: visible
+  opacity: 1
+.contacts-item__button:hover::after
+  bottom: 0
+  opacity: 1
+  visibility: visible
+
+// Footer
+.footer
+  padding: 20px 0 10px 0
+  &-wrapper
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+  &-content
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 0 20px 0
+  &-logo
+    width: 170px
+    height: 170px
+    align-self: flex-start
+    img
+      width: 100%
+      height: 100%
+      border-radius: 50%
+      box-shadow: 0 0 25px rgba($main, 0.7)
+
+  &-list
+    direction: rtl
+    flex-grow: 1
+    margin: 0
+    padding: 0 0 0 15px
+    font-family: 'MiriamLibre', sans
+    font-style: normal
+    font-weight: bold
+    list-style: none
+    color: $main
+
+    li
+      padding: 0
+      &:not(:last-child)
+        margin: 0 0 24px 0
+
+    &__name
+      font-size: 26px
+      line-height: 130%
+      margin: 0 0 0 20px
+      float: right
+    &__text
+      font-size: 22px
+      line-height: 130%
+
+  &-privacy
+    position: absolute
+    bottom: 0
+    direction: rtl
+    margin: 0 auto
+    &__text
+      font-family: 'MiriamLibre', sans
+      font-weight: normal
+      font-size: 12px
+      line-height: 133%
+      color: rgba(225, 188, 41, 0.5)
+      &:first-child
+        direction: ltr
+      &:not(:last-child)
+        margin: 0 0 0 20px
