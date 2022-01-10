@@ -433,7 +433,7 @@ body {
 .hidden-logo {
   width: 200px;
   height: 200px;
-  margin: 0 0 40px 0;
+  margin: 0 0 60px 0;
 }
 
 .hidden-logo img {
@@ -482,7 +482,7 @@ body {
 }
 
 .hidden-list li:not(:last-child) {
-  margin: 0 0 15px 0;
+  margin: 0px 0 25px 0;
 }
 
 .header {
@@ -1348,6 +1348,12 @@ body {
       align-self: flex-start;
 }
 
+.footer-logo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 .footer-logo img {
   width: 100%;
   height: 100%;
@@ -1719,6 +1725,9 @@ body {
   .gallery-button {
     min-width: 150px;
     min-height: 45px;
+  }
+  .gallery-button::before, .gallery-button::after {
+    display: none;
   }
   .gallery-content {
     gap: 10px;
