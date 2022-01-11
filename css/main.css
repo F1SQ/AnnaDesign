@@ -1914,8 +1914,8 @@ body {
     height: 40px;
   }
   .footer-logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .footer-list__name {
     font-size: 14px;
@@ -1936,11 +1936,8 @@ body {
     margin: 0 20px 0 0;
   }
   .gallery-item {
-    width: 100%;
-  }
-  .footer-logo {
-    width: 90px;
-    height: 90px;
+    width: 31%;
+    height: 200px;
   }
   .footer-content {
     margin: 0 0 30px 0;
@@ -1980,6 +1977,9 @@ body {
     min-height: 45px;
     width: 180px;
     font-size: 20px;
+  }
+  .gallery-content {
+    gap: 8px;
   }
   .gallery-button {
     width: 100%;
@@ -2028,6 +2028,9 @@ body {
   .contacts-item__link {
     width: 35px;
     height: 35px;
+  }
+  .footer-logo {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
