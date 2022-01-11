@@ -433,7 +433,7 @@ body {
 .hidden-logo {
   width: 200px;
   height: 200px;
-  margin: 0 0 60px 0;
+  margin: 0 0 50px 0;
 }
 
 .hidden-logo img {
@@ -460,7 +460,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin: 0 0 30px 0;
   list-style: none;
 }
 
@@ -482,7 +482,12 @@ body {
 }
 
 .hidden-list li:not(:last-child) {
-  margin: 0px 0 25px 0;
+  margin: 0px 0 20px 0;
+}
+
+.hidden-phone {
+  display: block;
+  overflow: hidden;
 }
 
 .header {
@@ -539,6 +544,7 @@ body {
   font-size: 20px;
   line-height: 118%;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .header-social__phone:before {
@@ -560,6 +566,26 @@ body {
 .header-social__phone:hover:before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.header-social__phone::after {
+  content: '';
+  position: absolute;
+  right: -150px;
+  bottom: -50px;
+  background-color: rgba(255, 215, 0, 0.2);
+  width: 30px;
+  height: 150px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation-name: about-slide;
+          animation-name: about-slide;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .header-list {
@@ -626,7 +652,7 @@ body {
 .main {
   position: relative;
   background-image: url(../img/main-bg.webp);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 1px solid #FFD700;
@@ -699,8 +725,8 @@ body {
   font-weight: normal;
   font-size: 75px;
   line-height: 70px;
-  color: #FFD700;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #111111;
+  text-shadow: 3px 3px 4px #ffd700;
   margin: 0 0 25px 0;
 }
 
@@ -714,8 +740,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #FFD700;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #111111;
+  text-shadow: 2px 2px 3px #ffd700;
   margin: 0 0 25px 0;
 }
 
@@ -732,7 +758,7 @@ body {
           justify-content: center;
   font-family: 'MiriamLibre', sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 120%;
   width: 220px;
   min-height: 60px;
@@ -888,12 +914,12 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
 }
 
 .gallery-item {
-  width: 23%;
-  height: 260px;
+  width: 23.3333%;
+  max-height: 440px;
 }
 
 .gallery-item a {
@@ -960,7 +986,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .about-wrapper {
@@ -995,7 +1021,8 @@ body {
   font-weight: normal;
   font-size: 25px;
   line-height: 36px;
-  color: #FFD700;
+  color: #111111;
+  text-shadow: 1px 1px 5px #ffd700;
 }
 
 .about-list li img {
@@ -1179,7 +1206,7 @@ body {
   font-family: 'MiriamLibre', sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 86%;
   letter-spacing: 0.05em;
   color: #101010;
@@ -1419,19 +1446,16 @@ body {
   margin: 0 0 0 20px;
 }
 
-@media (max-width: 1400px) {
-  .gallery-item {
-    width: 31%;
+@media (max-width: 1600px) {
+  .main-logo {
+    max-width: 400px;
+    max-height: 400px;
   }
 }
 
 @media (max-width: 1200px) {
   .container {
     width: 940px;
-  }
-  .main-logo {
-    max-width: 400px;
-    max-height: 400px;
   }
   .main-title {
     font-size: 65px;
@@ -1456,6 +1480,12 @@ body {
     margin: 0 0 20px 20px;
     font-size: 20px;
     line-height: normal;
+  }
+  .gallery-content {
+    gap: 15px;
+  }
+  .gallery-item {
+    width: 23.8%;
   }
   .about {
     padding: 60px 0;
@@ -1549,7 +1579,7 @@ body {
   }
   .gallery-item {
     width: 23.4%;
-    height: 220px;
+    height: 350px;
   }
   .about {
     padding: 50px 0 50px 0;
@@ -1606,7 +1636,6 @@ body {
   }
   .gallery-item {
     width: 31.5%;
-    height: 220px;
   }
   .about-title {
     margin: 0 0 30px 0;
@@ -1734,7 +1763,6 @@ body {
   }
   .gallery-item {
     width: 32.1%;
-    height: 180px;
   }
   .about {
     padding: 40px 0 40px 0;
@@ -1802,8 +1830,7 @@ body {
     margin: 0 0 17px 17px;
   }
   .gallery-item {
-    width: 31.4%;
-    height: 130px;
+    width: 48%;
   }
   .contacts-item {
     padding: 25px;
@@ -1854,9 +1881,15 @@ body {
   .header-social__link:not(:last-child) {
     margin: 0 20px 0 0;
   }
+  .gallery-item {
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
+  .header-social__phone {
+    display: none;
+  }
   .main-logo {
     max-width: 210px;
     max-height: 220px;
@@ -1880,10 +1913,6 @@ body {
   }
   .gallery-button:last-child {
     margin: 0 0 10px 0;
-  }
-  .gallery-item {
-    width: 48%;
-    height: 140px;
   }
   .about-title {
     font-size: 30px;
