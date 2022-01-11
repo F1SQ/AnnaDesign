@@ -1373,6 +1373,8 @@ body {
   height: 170px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .footer-logo a {
@@ -1412,15 +1414,15 @@ body {
 }
 
 .footer-list__name {
-  font-size: 26px;
-  line-height: 130%;
+  font-size: 23px;
+  line-height: normal;
   margin: 0 0 0 20px;
   float: right;
 }
 
 .footer-list__text {
   font-size: 22px;
-  line-height: 130%;
+  line-height: normal;
 }
 
 .footer-privacy {
@@ -1784,8 +1786,6 @@ body {
   .footer-logo {
     width: 130px;
     height: 130px;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
   }
   .footer-list__name {
     font-size: 17px;
@@ -1884,6 +1884,23 @@ body {
   .gallery-item {
     width: 100%;
   }
+  .footer-logo {
+    width: 90px;
+    height: 90px;
+  }
+  .footer-content {
+    margin: 0 0 30px 0;
+  }
+  .footer-list li:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+  .footer-list__name {
+    font-size: 12px;
+    margin: 0 0 0 10px;
+  }
+  .footer-list__text {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1954,23 +1971,6 @@ body {
   .contacts-item__link {
     width: 35px;
     height: 35px;
-  }
-  .footer-logo {
-    width: 90px;
-    height: 90px;
-  }
-  .footer-content {
-    margin: 0 0 30px 0;
-  }
-  .footer-list li:not(:last-child) {
-    margin: 0 0 20px 0;
-  }
-  .footer-list__name {
-    font-size: 12px;
-    margin: 0 0 0 10px;
-  }
-  .footer-list__text {
-    font-size: 11px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -273,7 +273,7 @@
     &-logo
       width: 130px
       height: 130px
-      flex-shrink: 0
+      // flex-shrink: 0
     &-list
       &__name
         font-size: 17px
@@ -351,6 +351,21 @@
   .gallery
     &-item
       width: 100%
+  .footer
+    &-logo
+      width: 90px
+      height: 90px
+    &-content
+      margin: 0 0 30px 0
+    &-list
+      li
+        &:not(:last-child)
+          margin: 0 0 20px 0
+      &__name
+        font-size: 12px
+        margin: 0 0 0 10px
+      &__text
+        font-size: 11px
 @media (max-width : 375px)
   .header
     &-social
@@ -411,18 +426,3 @@
       &__link
         width: 35px
         height: 35px
-  .footer
-    &-logo
-      width: 90px
-      height: 90px
-    &-content
-      margin: 0 0 30px 0
-    &-list
-      li
-        &:not(:last-child)
-          margin: 0 0 20px 0
-      &__name
-        font-size: 12px
-        margin: 0 0 0 10px
-      &__text
-        font-size: 11px
