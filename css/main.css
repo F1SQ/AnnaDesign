@@ -488,6 +488,56 @@ body {
 .hidden-phone {
   display: block;
   overflow: hidden;
+  position: relative;
+  color: #FFD700;
+  font-family: 'MiriamLibre', sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 118%;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.hidden-phone:before {
+  content: '';
+  position: absolute;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFD700;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.hidden-phone:before:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.hidden-phone::after {
+  content: '';
+  position: absolute;
+  right: -150px;
+  bottom: -50px;
+  background-color: rgba(255, 215, 0, 0.2);
+  width: 30px;
+  height: 150px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation-name: about-slide;
+          animation-name: about-slide;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .header {
@@ -582,8 +632,8 @@ body {
           animation-name: about-slide;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -646,6 +696,10 @@ body {
 }
 
 .header-button {
+  display: none;
+}
+
+.header__tiktok {
   display: none;
 }
 
@@ -1182,8 +1236,8 @@ body {
           animation-name: about-slide;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -1906,6 +1960,9 @@ body {
 @media (max-width: 375px) {
   .header-social__phone {
     display: none;
+  }
+  .header__tiktok {
+    display: block;
   }
   .main-logo {
     max-width: 210px;
