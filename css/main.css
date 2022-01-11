@@ -1884,9 +1884,6 @@ body {
   .gallery-button:last-child {
     margin: 0 0 17px 17px;
   }
-  .gallery-item {
-    width: 48%;
-  }
   .contacts-item {
     padding: 25px;
     min-height: 180px;
@@ -1937,7 +1934,7 @@ body {
     margin: 0 20px 0 0;
   }
   .gallery-item {
-    width: 31.7%;
+    width: 31.4%;
     height: 200px;
   }
   .footer-content {
