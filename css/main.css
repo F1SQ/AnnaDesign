@@ -1818,7 +1818,8 @@ body {
     gap: 10px;
   }
   .gallery-item {
-    width: 32.1%;
+    width: 31.6%;
+    height: 240px;
   }
   .about {
     padding: 40px 0 40px 0;
