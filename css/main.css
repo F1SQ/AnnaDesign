@@ -2031,4 +2031,10 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 320px) {
+  .gallery-item {
+    width: 31.4%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
