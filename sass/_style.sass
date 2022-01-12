@@ -381,7 +381,7 @@
     align-items: flex-start
     justify-content: flex-start
     flex-direction: column
-    flex: 1 1 47%
+    flex: 0 1 47%
     max-width: 600px
     min-height: 240px
     padding: 30px
@@ -467,6 +467,8 @@
       letter-spacing: 0.05em
       color: #101010
       background-color: $main
+      border: none
+      cursor: pointer
       border-radius: 30px
       text-decoration: none
       overflow: hidden
@@ -490,6 +492,7 @@
       &::after
         bottom: -50%
         transition: all 0.2s ease-in
+
     &__phone
       position: relative
       font-family: 'MiriamLibre', sans
@@ -530,6 +533,33 @@
         height: auto
       &:not(:last-child)
         margin: 0 0 0 30px
+  &-popup
+    position: absolute
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    max-width: 70%
+    width: 130px
+    left: 50%
+    top: -5px
+    padding: 7px
+    color: #111111
+    border: 2px solid #111111
+    border-radius: 15px 15px 0 0
+    font-size: 20px
+    letter-spacing: 1px
+    transform: translate(-50%, 0)
+    background-color: $main
+    font-weight: bold
+    opacity: 0
+    pointer-events: none
+
+    &__wrapper
+      position: relative
+      margin: 0 auto
+
+.contacts-popup.active
+  animation: contacts-popup 1s ease-in-out forwards
 
 .contacts-item__button:active
   color: $main

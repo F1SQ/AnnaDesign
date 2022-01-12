@@ -30,6 +30,24 @@ body
   100%
     right: 130%
 
+@keyframes contacts-popup
+  0%
+    opacity: 0
+    pointer-events: none
+    transform: translate(-50%, 0)
+  40%
+    opacity: 1
+    pointer-events: auto
+    transform: translate(-50%, -30px)
+  80%
+    opacity: 1
+    pointer-events: auto
+    transform: translate(-50%, -30px)
+  100%
+    opacity: 0
+    pointer-events: none
+    transform: translate(-50%, 0)
+
 .hidden
   &-menu
     width: 100%
