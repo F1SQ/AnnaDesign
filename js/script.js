@@ -90,4 +90,21 @@ function copyToClipboard() {
 
 });
 
+
+const videos = document.querySelectorAll('.video');
+
+    videos.forEach((el) => {    
+    el.addEventListener('click', videoFunc);
+    
+    function videoFunc(e) {
+      e.preventDefault();
+      let video = document.createElement('video');
+      video.autoplay = true;
+      let videoHref = el.getAttribute('data-video');
+      video.src = videoHref;
+      // video.setAttribute("controls","controls");
+      el.appendChild(video);
+      el.removeEventListener('click', videoFunc);
+    }
+    });
  
