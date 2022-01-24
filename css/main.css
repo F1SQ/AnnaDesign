@@ -2083,7 +2083,6 @@ body {
     gap: 8px;
   }
   .gallery-button {
-    width: 100%;
     margin: 0 0 10px 0;
   }
   .gallery-button:last-child {
