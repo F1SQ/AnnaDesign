@@ -10,7 +10,7 @@ if (menuLinks.length > 0) {
     const menuLink = e.target;
     if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header-wrapper').offsetHeight;
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().bottom + pageYOffset - document.querySelector('.header').offsetHeight;
 
       window.scrollTo({
         top: gotoBlockValue,
@@ -81,7 +81,7 @@ function copyToClipboard() {
   const textarea = document.createElement('textarea');
   textarea.setAttribute('readonly', '');
   textarea.style.position= 'absolute';
-  textarea.value = ('https://www.instagram.com/anna.ndesign/');
+  textarea.value = ('https://annandesign.com/');
   document.body.appendChild(textarea);
   textarea.select();
   document.execCommand('copy');
